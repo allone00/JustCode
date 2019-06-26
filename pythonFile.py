@@ -50,7 +50,6 @@ def create_simple_form():
     c.drawString(250, 500, 'Passport Number:   ' + str(a[4]))
 
     c.save()
-    bot.send_document()
 
 
 bot.polling(none_stop=True)
