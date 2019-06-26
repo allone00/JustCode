@@ -29,9 +29,9 @@ def echo(message):
         a.append(message.text)
     else:
         bot.send_message(message.chat.id, "Ок, сейчас всё будет!")
-        create_simple_form()
+        create_simple_form(message)
 
-def create_simple_form():
+def create_simple_form(message):
     c = canvas.Canvas('simple_form.pdf')
 
     c.setFont("Courier", 20)
@@ -50,6 +50,9 @@ def create_simple_form():
     c.drawString(250, 500, 'Passport Number:   ' + str(a[4]))
 
     c.save()
+    document2send = open("simple_form.pdf", "rb")
+    data = document2send.read()
+    bot.send_document(message.chat.id, data, caption="simple_form.pdf")
 
 
 bot.polling(none_stop=True)
