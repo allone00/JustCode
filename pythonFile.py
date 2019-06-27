@@ -7,7 +7,7 @@ from reportlab.lib.colors import magenta, pink, blue, green
 import pdfrw
 from reportlab.pdfgen import canvas
 
-token = "662005408:AAGlsrD4kN6sHxy4PoEd45tnKRwbLZ8ea-c"
+token = ""
 
 telebot.apihelper.proxy = {'https': 'socks5h://geek:socks@t.geekclass.ru:7777'}
 
